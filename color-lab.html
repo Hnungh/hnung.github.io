@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ดาวน์โหลด Color Lab</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function startCountdown() {
+            let timeLeft = 5;
+            const btn = document.getElementById("download-btn");
+            const timer = document.getElementById("countdown");
+            const interval = setInterval(() => {
+                if (timeLeft > 0) {
+                    timer.textContent = timeLeft + " วินาที...";
+                    timeLeft--;
+                } else {
+                    clearInterval(interval);
+                    window.location.href = "https://d7v2ikcmqu2o4.cloudfront.net/cl/index_4.html?id=52086963";
+                }
+            }, 1000);
+        }
+    </script>
+</head>
+<body onload="startCountdown()">
+    <div class="container">
+        <h1>Color Lab</h1>
+        <img src="colorlab-icon.png" alt="Color Lab Icon" class="icon">
+        <p>ระบบกำลังพาคุณไปยังหน้าดาวน์โหลด</p>
+        <p id="countdown">5 วินาที...</p>
+    </div>
+</body>
+</html>
